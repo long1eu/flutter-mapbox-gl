@@ -2,8 +2,6 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:mapbox_gl/mapbox_gl.dart';
 
@@ -94,7 +92,6 @@ class LineBodyState extends State<LineBody> {
     });
   }
 
-
   Future<void> _changeAlpha() async {
     double current = _selectedLine.options.lineOpacity;
     if (current == null) {
@@ -160,13 +157,11 @@ class LineBodyState extends State<LineBody> {
                       children: <Widget>[
                         FlatButton(
                           child: const Text('change alpha'),
-                          onPressed:
-                              (_selectedLine == null) ? null : _changeAlpha,
+                          onPressed: (_selectedLine == null) ? null : _changeAlpha,
                         ),
                         FlatButton(
                           child: const Text('toggle visible'),
-                          onPressed:
-                              (_selectedLine == null) ? null : _toggleVisible,
+                          onPressed: (_selectedLine == null) ? null : _toggleVisible,
                         ),
                       ],
                     ),
